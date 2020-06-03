@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Soleto regular";
+  src: url("css/fonts/Dalton Maag - Soleto.ttf");
+}
+@font-face {
+  font-family: "Soleto light";
+  src: url("css/fonts/Dalton Maag - Soleto Light.ttf");
+}
+@font-face {
+  font-family: "Soleto medium";
+  src: url("css/fonts/Dalton Maag - Soleto Medium.ttf");
+}
+@font-face {
+  font-family: "Soleto XBold";
+  src: url("css/fonts/Dalton Maag - Soleto XBold.ttf");
+}
+body {
+  font-family: "Soleto regular", sans-serif;
+}
+
+.parallax-container {
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: columnr;
+}
+
+.parallax-container-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .parallax-container {
+    display: none;
+  }
+}
+.bg_layer1 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  min-height: 553px;
+  z-index: 3;
+  min-width: 965px;
+  background-image: url("../img/layer_1.png");
+}
+
+.bg_layer2 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  min-height: 289px;
+  z-index: 5;
+  min-width: 690px;
+  left: 136px;
+  top: 131px;
+  background-image: url("../img/layer_2.png");
+}
+
+.bg_layer3 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  min-height: 230px;
+  z-index: 12;
+  min-width: 576px;
+  top: 160px;
+  left: 194px;
+  background-image: url("../img/layer_3.png");
+}
+
+/*# sourceMappingURL=style.css.map */
