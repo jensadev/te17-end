@@ -106,7 +106,7 @@ main header {
 }
 
 .product-button {
-  background-color: #dd0890;
+  background-color: #ac0670;
   width: 50%;
   border: none;
   color: #f0f0f0;
@@ -130,6 +130,7 @@ main header {
 footer {
   margin-top: auto;
   padding-top: 4rem;
+  color: #f0f0f079;
 }
 
 /* parallax jox */
