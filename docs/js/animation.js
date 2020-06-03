@@ -1,8 +1,8 @@
-let l1, l2, l3, outX, outY;
+let outX, outY;
 
-l1 = document.getElementsByClassName('bg_layer1')[0];
-l2 = document.getElementsByClassName('bg_layer2')[0];
-l3 = document.getElementsByClassName('bg_layer3')[0];
+const l1 = document.getElementsByClassName('bg_layer1')[0];
+const l2 = document.getElementsByClassName('bg_layer2')[0];
+const l3 = document.getElementsByClassName('bg_layer3')[0];
 
 function move(x, y) {
     l1.style = "transform: translate3d(" + x / 20 + "px, " + y / 20 + "px, 0px)";
