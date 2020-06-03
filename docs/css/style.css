@@ -30,6 +30,15 @@ body {
   flex-wrap: nowrap;
 }
 
+a {
+  color: #f0f0f0;
+}
+
+a:hover {
+  color: #dd0890;
+  text-decoration: none;
+}
+
 .container {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -39,9 +48,21 @@ body {
 
 nav {
   padding-top: 2rem;
+  align-items: baseline;
+  font-size: 1.2rem;
 }
 nav .brand {
   height: 48px;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  padding-right: 2rem;
+}
+
+main {
+  padding-top: 4rem;
 }
 
 footer {
