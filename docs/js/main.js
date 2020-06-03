@@ -11,7 +11,6 @@ window.addEventListener('load', (e) => {
     for (const button of buttons) {
         // console.log(button);
         button.addEventListener('click', (e) => {
-            console.log('JAG HAR KÖPT EN KATT!');
             cart.push(
                 {
                     title: 'Katt',
