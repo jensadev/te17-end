@@ -1,25 +1,33 @@
 @font-face {
   font-family: "Soleto regular";
-  src: url("css/fonts/Dalton Maag - Soleto.ttf");
+  src: url("fonts/Dalton Maag - Soleto.ttf");
 }
 @font-face {
   font-family: "Soleto light";
-  src: url("css/fonts/Dalton Maag - Soleto Light.ttf");
+  src: url("fonts/Dalton Maag - Soleto Light.ttf");
 }
 @font-face {
   font-family: "Soleto medium";
-  src: url("css/fonts/Dalton Maag - Soleto Medium.ttf");
+  src: url("fonts/Dalton Maag - Soleto Medium.ttf");
 }
 @font-face {
   font-family: "Soleto XBold";
-  src: url("css/fonts/Dalton Maag - Soleto XBold.ttf");
+  src: url("fonts/Dalton Maag - Soleto XBold.ttf");
 }
-h-100 {
+.h-100 {
   height: 100% !important;
 }
 
-d-flex {
+.w-100 {
+  width: 100%;
+}
+
+.d-flex {
   display: flex;
+}
+
+.hide {
+  display: none;
 }
 
 body {
@@ -64,11 +72,67 @@ nav ul li {
 main {
   padding-top: 4rem;
 }
+main header {
+  width: 100%;
+}
+
+.product {
+  margin: 0 1rem;
+  background-color: rgba(221, 8, 144, 0.1);
+}
+
+.product-section {
+  padding-top: 2rem;
+}
+
+.product-header {
+  padding-top: 1rem;
+}
+
+.product-image {
+  opacity: 0.9;
+  filter: grayscale(0.4);
+}
+
+.product-footer {
+  justify-content: space-between;
+  padding: 0.4rem;
+  align-items: start;
+}
+
+.product-price {
+  font-family: "Soleto medium", sans-serif;
+  font-weight: 600;
+}
+
+.product-button {
+  background-color: #dd0890;
+  width: 50%;
+  border: none;
+  color: #f0f0f0;
+  border-radius: 2px;
+}
+
+.page-header {
+  font-family: "Soleto XBold", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.page-lead {
+  font-family: "Soleto light", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #f0f0f0c2;
+}
 
 footer {
   margin-top: auto;
+  padding-top: 4rem;
 }
 
+/* parallax jox */
 .parallax-container {
   height: 100%;
   width: 100%;

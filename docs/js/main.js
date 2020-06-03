@@ -1,34 +1,51 @@
-let l1, l2, l3, outX, outY;
+let cart = [];
+const cartElement = document.querySelector('#cart');
 
-l1 = document.getElementsByClassName('bg_layer1')[0];
-l2 = document.getElementsByClassName('bg_layer2')[0];
-l3 = document.getElementsByClassName('bg_layer3')[0];
+window.addEventListener('load', (e) => {
+    if (cart.length === 0) {
+        cartElement.classList.toggle('hide');
+    }
 
-function move(x, y) {
-    l1.style = "transform: translate3d(" + x / 20 + "px, " + y / 20 + "px, 0px)";
-    l2.style = "transform: translate3d(" + x / 40 + "px, " + y / 40 + "px, 0px)";
-    l3.style = "transform: translate3d(" + x / 200 + "px, " + y / 200 + "px, 0px)";
+    const buttons = document.getElementsByTagName('button');
+
+    for (const button of buttons) {
+        // console.log(button);
+        button.addEventListener('click', (e) => {
+            console.log('JAG HAR KÖPT EN KATT!');
+            cart.push(
+                {
+                    title: 'Katt',
+                    price: 100
+                }
+            );
+            updateCart();
+        }, false);
+    }
+
+
+}, false);
+
+function updateCart() {
+    if (cart.length !== 0 && cartElement.classList[1] === 'hide') {
+        cartElement.classList.toggle('hide');
+    }
+
+
+    total = 0;
+
+    const cartList = document.querySelector('#cart-list');
+
+    cartList.innerHTML = '';
+
+    for (const product of cart) {
+        const li = document.createElement('li');
+        li.textContent = product.title;
+
+        cartList.appendChild(li);
+
+        total += product.price;
+    }
+
+    const totalElement = document.querySelector('#total');
+    totalElement.textContent = total + 'kr';
 }
-
-document.addEventListener('mousemove', (e) => {
-    move(e.x, e.y);
-    move(e.x, e.y);
-    move(e.x, e.y);
-});
-
-document.addEventListener('mouseout', (e) => {
-    outX = e.x;
-    outY = e.y;
-    let wx = window.innerWidth / 2;
-    let wy = window.innerHeight / 2;
-
-    setTimeout(function() {
-        if (outX > wx) {
-            move(outX - 10, outY);
-        }
-    }, 1000)
-
-});
-
-document.addEventListener('mouseenter', (e) => {
-});
