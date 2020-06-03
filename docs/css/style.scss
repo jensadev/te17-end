@@ -31,12 +31,14 @@ body {
     background-color: #150028;
     color: #f0f0f0;
     flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .container {
   margin-left: 2rem;
   margin-right: 2rem;
   z-index: 100;
+  width: 100%;
 }
 
 nav {
@@ -45,6 +47,10 @@ nav {
   .brand {
     height: 48px;
   }
+}
+
+footer {
+  margin-top: auto;
 }
 
 .parallax-container {
